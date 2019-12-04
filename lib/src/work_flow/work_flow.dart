@@ -10,8 +10,7 @@ class Workflow {
   Workflow({this.host, this.port, this.stepList});
 
   Future init() async {
-    this._webdriver = Webdriver(host: this.host, port: this.port);
-    await this._webdriver.sessionCreate();
+    this._webdriver = await webdriverFactory(host: this.host, port: this.port);
 
     for (Step step in stepList)
       await step.action(this._webdriver, this._context);
