@@ -1,10 +1,5 @@
-import 'dart:io';
-import 'dart:convert' as convert;
-
 import "package:test/test.dart";
-import 'package:mockito/mockito.dart';
-
-import 'package:webdriver_framework/src/webdriver.dart';
+import 'package:webdriver_framework/webdriver.dart';
 
 import 'mock/webdriver_server.dart';
 
