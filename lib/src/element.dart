@@ -4,8 +4,9 @@ import 'package:webdriver_framework/src/http_request.dart';
 
 class Element {
   final String sessionURL;
-
-  Element({this.sessionURL});
+  final String elementId;
+  Element({String host, String sessionId, this.elementId})
+      : sessionURL = "${host}/session/${sessionId}/element/$elementId";
 
   Future setValue(String value) async {
     await HTTPRequest.post(

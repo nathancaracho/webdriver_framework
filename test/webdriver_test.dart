@@ -1,10 +1,5 @@
-import 'dart:io';
-import 'dart:convert' as convert;
-
 import "package:test/test.dart";
-import 'package:mockito/mockito.dart';
-
-import 'package:webdriver_framework/src/webdriver.dart';
+import 'package:webdriver_framework/webdriver.dart';
 
 import 'mock/webdriver_server.dart';
 
@@ -13,7 +8,7 @@ const String host = "http://localhost";
 
 void main() async {
   await webdriverServer(port);
-  group("Webdriver", () {
+  group("Webdriver ", () {
     test("Not create session", () async {
       try {
         await webdriverFactory(port: 9090, host: host);
@@ -21,7 +16,7 @@ void main() async {
         expect((ex is NoSessionCreate), isTrue);
       }
     });
-    test("Webdriver: object create", () async {
+    test("Webdriver object create", () async {
       Webdriver webdriver = await webdriverFactory(port: port, host: host);
       expect(webdriver, isNotNull);
     });
