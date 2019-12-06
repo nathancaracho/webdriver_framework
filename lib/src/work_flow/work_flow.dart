@@ -1,5 +1,5 @@
 import 'package:webdriver_framework/src/work_flow/step.dart';
-import 'package:webdriver_framework/src/driver/driver.dart';
+import 'package:webdriver_framework/src/core/core.dart';
 
 class Workflow {
   final List<Step> stepList;

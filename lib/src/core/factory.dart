@@ -1,6 +1,6 @@
 import 'dart:convert' as convert;
 
-import 'package:webdriver_framework/src/driver/drivers.dart';
+import 'package:webdriver_framework/src/core/drivers.dart';
 import 'package:webdriver_framework/src/http_request.dart';
 
 import 'exceptions.dart';

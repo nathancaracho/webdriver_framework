@@ -59,7 +59,7 @@ abstract class HTTPRequest {
 
   static Object _getObject(http.Response reponse) {
     var body = convert.jsonDecode(reponse.body);
-    if (body["status"] != 0) throw body;
+    if (body["status"] != 0) throw body["value"]["message"];
     return body;
   }
 }
